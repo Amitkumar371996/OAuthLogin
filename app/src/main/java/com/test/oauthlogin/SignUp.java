@@ -3,6 +3,7 @@ package com.test.oauthlogin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,13 +26,20 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        mAuth = FirebaseAuth.getInstance();
-        Button login=findViewById(R.id.button4);
-        login.setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.usignin)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String mail=((EditText)findViewById(R.id.email)).getText().toString();
-                String password=((EditText)findViewById(R.id.pass)).getText().toString();
+                startActivity(new Intent(SignUp.this, MainActivity.class));
+            }
+        });
+
+        mAuth = FirebaseAuth.getInstance();
+        Button signup=findViewById(R.id.usignup);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mail=((EditText)findViewById(R.id.uemail)).getText().toString();
+                String password=((EditText)findViewById(R.id.upass)).getText().toString();
                 String name=((EditText)findViewById(R.id.fname)).getText().toString()+" "+((EditText)findViewById(R.id.lname)).getText().toString();
                 createUser(mail, password, name);
             }
@@ -47,7 +55,7 @@ public class SignUp extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(SignUp.this, user.getUid(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUp.this, "User Registered", Toast.LENGTH_LONG).show();
 
                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                                     .setDisplayName(name)
