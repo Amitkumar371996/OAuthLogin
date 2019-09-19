@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "245343684175",
+    "firebase_url": "https://oauthlogin-94273.firebaseio.com",
+    "project_id": "oauthlogin-94273",
+    "storage_bucket": "oauthlogin-94273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245343684175:android:3ce557202d3648a1f80c3a",
+        "android_client_info": {
+          "package_name": "com.test.oauthlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245343684175-t9kuk8g6tnmp4o5fbklotk2sldrer8pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrrWaRM2nibrjPZOvmHSHbzZPVlBvAlt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245343684175-t9kuk8g6tnmp4o5fbklotk2sldrer8pp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
